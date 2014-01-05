@@ -1,0 +1,32 @@
+<h1>Listing users</h1>
+
+
+
+
+  <div id = 'users'>
+    <%=render @users %>
+  </div>
+
+<br>
+
+<%= form_for(User.new, remote: true) do |f| %>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :age %><br>
+      <%= f.number_field :age %>
+    </div>
+    <div class="field">
+      <%= f.label :male %><br>
+      <%= f.text_field :male %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+
+
+<%= link_to 'New User', new_user_path %>

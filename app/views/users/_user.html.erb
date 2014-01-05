@@ -1,0 +1,9 @@
+
+<%= div_for user do %>
+    <td><%= user.name %></td>
+    <td><%= user.age %></td>
+    <td><%= user.male %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, remote: true %></td>
+<% end %>

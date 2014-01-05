@@ -1,0 +1,2 @@
+$('div#users').append("<%= escape_javascript(render @user) %>");
+$('div#<%= dom_id(@user)%>').effect('highlight');
